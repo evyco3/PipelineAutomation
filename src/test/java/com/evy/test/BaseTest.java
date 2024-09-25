@@ -1,21 +1,19 @@
 package com.evy.test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.Test;
+import org.evy.toolkit.drivers.Driver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
 
 public class BaseTest {
 
-    @Test
-    public void test(){
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options=new ChromeOptions();
-        options.addArguments("--headless");
-        WebDriver driver=new ChromeDriver(options);
-        driver.get("https://www.google.com/");
-        System.out.println(driver.getTitle());
-        driver.quit();
+    @BeforeMethod
+    public void setup(){
+        Driver.getInstance().initDriver();
+    }
+
+    @AfterMethod
+    public void tearDown(){
+        Driver.getInstance().quitDriver();
     }
 }
