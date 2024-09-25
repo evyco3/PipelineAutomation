@@ -40,8 +40,10 @@ public final class Driver {
             WebDriver driver = DRIVER_THREAD_LOCAL.get();
             if (driver != null) {
                 driver.quit();
+                LoggerUtils.info(Driver.class, "WebDriver quit successfully ");
+
                 DRIVER_THREAD_LOCAL.remove();
-                LoggerUtils.info(Driver.class, "WebDriver quit successfully and removed from ThreadLocal.");
+                LoggerUtils.info(Driver.class, "WebDriver removed from ThreadLocal.");
             } else {
                 LoggerUtils.warn(Driver.class, "No WebDriver instance found to quit.");
             }
