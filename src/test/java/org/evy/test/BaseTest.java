@@ -1,4 +1,4 @@
-package com.evy.test;
+package org.evy.test;
 
 import org.evy.toolkit.drivers.Driver;
 import org.testng.annotations.AfterMethod;

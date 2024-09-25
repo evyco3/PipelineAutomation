@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/evyco/IdeaProjects/PipelineAutomation">
         <classes>
-            <class name="com.evy.test.BaseTest"/>
+            <class name="org.evy.test.LoginTest"/>
         </classes>
     </test>
 </suite>
