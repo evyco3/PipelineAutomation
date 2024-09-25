@@ -1,0 +1,22 @@
+# Ignore all files and directories
+*
+
+# Allow the src directory and all subdirectories
+!/src
+!/src/**
+
+# Allow specific files
+!/testng.xml
+!/pom.xml
+!/Jenkinsfile
+
+# Allow the .gitignore file itself
+!/.gitignore
+
+# Optionally ignore other common files
+# *.class
+# *.log
+# target/
+# .idea/
+# .project
+# .classpath
